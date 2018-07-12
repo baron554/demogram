@@ -1,8 +1,8 @@
 # Instagram style project 
 
 This project was done as part of a course on udemy to learn how to use firebase as well as some firebase functions
-
-[Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+To test it out, go to : 
+https://instagram-c6da0.firebaseapp.com/login
 
 ## Functionality
 
