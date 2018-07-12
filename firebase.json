@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "insta",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
