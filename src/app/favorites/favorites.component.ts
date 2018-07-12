@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-favorites',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
-
-  constructor() { }
+  favouritesList: any = [];
+  constructor() {
+  }
 
   ngOnInit() {
+    const uid = firebase.auth().currentUser.uid;
+    const favRef = firebase.database().ref('favourites').child(uid);
+    favRef.once('value').then(snapshot => {
+      const favouritesObj = snapshot.val();
+      this.favouritesList = Object.values(favouritesObj);
+    });
   }
 
 }

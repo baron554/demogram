@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
           this.email = user.email;
           this.uid = user.uid;
         }
-        this.router.navigate(['/myposts']);
+        this.router.navigate(['/allposts']);
       } else {
         this.isLoggedIn = false;
       }
